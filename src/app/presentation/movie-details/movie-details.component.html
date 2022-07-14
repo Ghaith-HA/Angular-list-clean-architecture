@@ -1,0 +1,36 @@
+
+
+<div class="cards-row">
+
+    <div class="movie_card" id="bright">
+    <div class="info_section">
+        <div class="movie_header">
+        <img class="locandina" src={{setImagePath(movieDetails.backdrop_path)}}/>
+        <h2 class="movie-title">{{movieDetails.title}}</h2>
+        <h5>Release date: {{movieDetails.release_date}}</h5>
+        <span class="minutes">Vote Average {{movieDetails.vote_average}}</span>   
+        <span class="minutes">Budget {{movieDetails.budget}}</span>   
+        <span class="minutes">Revenue {{movieDetails.revenue}}</span>   
+        <span class="minutes">Status {{movieDetails.status}}</span>   
+        <span class="minutes">Tagline {{movieDetails.tagline}}</span>   
+        </div>
+        <div class="movie_desc">
+        <p class="text">
+            Description:
+            {{movieDetails.overview}}
+        </p>
+        </div>
+        <div class="movie_social">
+        <ul>
+            <li><i class="ion-social-reddit-outline"></i></li>
+            <li><i class="ion-social-twitter-outline"></i></li>
+            <li><i class="ion-social-vimeo-outline"></i></li>
+        </ul>
+        </div>
+    </div>
+        <img class="blur_back" src={{setImagePath(movieDetails.poster_path)}}/>
+    </div>
+</div>
+<div class="lds-ring" *ngIf="isLoading">
+    <div></div><div></div><div></div>
+</div>
