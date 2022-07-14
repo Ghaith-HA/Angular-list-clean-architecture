@@ -1,0 +1,17 @@
+<mat-card class="mat-card-custom">
+    <div class="normal-filter">
+      
+      <mat-form-field class="normal-value">
+        <input
+          id="search-box"
+          matInput
+          style="margin-top: 2px"
+          [(ngModel)]="filterNormalValue"
+          (keydown)="applyNormalFiltersFromEnter($event)"
+        />
+        
+      </mat-form-field>
+      
+      <i class="ion-search"></i>
+    </div>
+</mat-card>
