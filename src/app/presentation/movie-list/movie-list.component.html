@@ -1,0 +1,34 @@
+<div class="count-results" >
+    <h2 class="count-results-text">Total Results: {{count}}</h2>
+    <h2 class="count-results-text">Results on current page: {{presenter.viewModel.movies.length}}</h2>
+</div>
+
+<div class="cards-row" *ngFor='let movie of presenter.viewModel.movies; index as id'>
+
+    <div class="movie_card" id="bright" (click)="viewMovieDetails(movie.id)">
+    <div class="info_section">
+        <div class="movie_header">
+        <img class="locandina" src={{setImagePath(movie.backdrop_path)}}/>
+        <h2>{{movie.title}}</h2>
+        <h5>Release date: {{movie.release_date}}</h5>
+        <span class="minutes">Vote Average {{movie.vote_average}}</span>   
+        </div>
+        <div class="movie_desc">
+        <p class="text">
+            {{movie.overview}}
+        </p>
+        </div>
+        <div class="movie_social">
+        <ul>
+            <li><i class="ion-social-reddit-outline"></i></li>
+            <li><i class="ion-social-twitter-outline"></i></li>
+            <li><i class="ion-social-vimeo-outline"></i></li>
+        </ul>
+        </div>
+    </div>
+        <img class="blur_back" src={{setImagePath(movie.poster_path)}}/>
+    </div>
+</div>
+<div class="lds-ring" *ngIf="isLoading">
+    <div></div><div></div><div></div>
+</div>
