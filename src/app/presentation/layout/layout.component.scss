@@ -1,0 +1,28 @@
+.feed-toggle {
+    width: 101%;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #00a6ff;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-flex;
+}
+.outline-active {
+    padding-inline: 40px;
+    display: inline-flex;
+}
+.nav-item{
+    display: inline-flex;
+    color: rgb(251, 251, 251)
+}
+ul {
+    list-style-type: none;
+}
+.icon {
+    font-size: 32px;
+}
+.nav-text {
+    padding: 7px;
+    font-size: 24px;
+}

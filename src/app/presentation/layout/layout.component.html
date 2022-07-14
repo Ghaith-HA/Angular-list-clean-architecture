@@ -1,0 +1,32 @@
+<div class="home-page">
+
+    <div class="container page">
+      <div class="row">
+  
+        <div class="col-md-9">
+          <div class="feed-toggle">
+            <ul *ngFor="let navItem of navigationData" class="nav nav-pills outline-active">
+              <li class="nav-item">
+                <a class="nav-link"
+                   (click)="setListTo(navItem.url)">
+                   <i 
+                   [ngClass]="[navItem.icon ? navItem.icon : '']"
+                    class="icon"></i>
+                   <span class="nav-text">{{navItem.label}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+        <app-advanced-search></app-advanced-search>
+          <router-outlet 
+   
+            *ngIf="true">
+          </router-outlet>
+        </div>
+  
+  
+      </div>
+    </div>
+  </div>
+  
