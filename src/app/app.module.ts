@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { counterReducer, movieListReducer, searchTextReducer } from './reducers';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
 declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ declarations: [
     BrowserAnimationsModule,
     BrowserModule,
     ServiceModule,
+    HttpClientModule,
     PresentationModule,
     MatProgressSpinnerModule,
     AppRoutingModule,
